@@ -1,0 +1,19 @@
+{
+  "name": "siema-tech-task",
+  "devDependencies": {
+    "lerna": "^8.1.5",
+    "rimraf": "^5.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "lerna run dev --stream --parallel --no-bail",
+    "dev:server": "lerna run start:dev --scope=server --stream",
+    "dev:client": "lerna run dev --scope=client --stream",
+    "dev:all": "npm run dev:server & npm run dev:client",
+    "build": "lerna run build --no-bail",
+    "clean": "lerna run clean --no-bail"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
